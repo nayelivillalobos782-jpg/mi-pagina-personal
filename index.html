@@ -1,0 +1,1546 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi mundo lila | Nayeli Villalobos Areche</title>
+
+<style>
+/* ==================================
+   1. ESTILOS GENERALES
+================================== */
+:root {
+    --lila: #a477d5;
+    --morado: #7041a4;
+    --oscuro: #382052;
+    --claro: #f8f2ff;
+    --rosa: #ead7ff;
+    --blanco: #ffffff;
+    --texto: #493b57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--claro);
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 85px 8%;
+    scroll-margin-top: 85px;
+}
+
+h2 {
+    color: var(--morado);
+    font-size: clamp(27px, 4vw, 38px);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+    color: #756381;
+}
+
+.linea {
+    width: 85px;
+    height: 5px;
+    background: var(--lila);
+    border-radius: 20px;
+    margin: 0 auto 25px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--morado);
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    margin: 8px 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: #512c80;
+    transform: translateY(-3px);
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px #7041a415;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px #7041a425;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #eee1ff;
+    color: var(--morado);
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ==================================
+   2. MENU DE NAVEGACION
+================================== */
+header {
+    background: linear-gradient(120deg, #7144a3, #a477d5);
+    padding: 12px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px #38205225;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f3dcff;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.menu a {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: #ffe6ff;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    color: white;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ==================================
+   3. PORTADA
+================================== */
+.hero {
+    min-height: 610px;
+    padding: 65px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background:
+        radial-gradient(circle at 10% 15%, #e6d0ff 0, transparent 35%),
+        linear-gradient(135deg, #f8f2ff, #e6d5ff);
+}
+
+.hero-text h1 {
+    font-size: clamp(36px, 5vw, 59px);
+    color: var(--oscuro);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero-text h1 span {
+    color: var(--morado);
+}
+
+.hero-text p {
+    font-size: 17px;
+    margin: 20px 0;
+}
+
+.frase {
+    color: var(--morado);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.hero-imagen {
+    position: relative;
+}
+
+.hero-imagen img {
+    height: 440px;
+    border-radius: 45% 45% 25px 25px;
+    border: 8px solid white;
+    box-shadow: 0 12px 35px #7041a440;
+}
+
+.decoracion {
+    position: absolute;
+    bottom: 20px;
+    left: -25px;
+    background: white;
+    color: var(--morado);
+    padding: 17px 22px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #38205220;
+    font-weight: bold;
+}
+
+/* ==================================
+   4. SOBRE MI
+================================== */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.sobre-foto img {
+    height: 400px;
+    border-radius: 25px;
+}
+
+.sobre-texto h3 {
+    color: var(--morado);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.dato {
+    padding: 13px;
+    background: #f4eaff;
+    border-radius: 12px;
+}
+
+.dato strong {
+    display: block;
+    color: var(--morado);
+}
+
+/* ==================================
+   5. MI HISTORIA
+================================== */
+.historia {
+    background: white;
+}
+
+.historia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.historia-card img {
+    height: 600px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+}
+
+.historia-card h3 {
+    color: var(--morado);
+    margin-bottom: 10px;
+}
+
+/* ==================================
+   6. MIS HOBBIES
+================================== */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.hobby {
+    overflow: hidden;
+    padding: 0;
+}
+
+.hobby img {
+    height: 500px;
+    transition: transform .5s;
+}
+
+.hobby:hover img {
+    transform: scale(1.05);
+}
+
+.hobby-contenido {
+    padding: 20px;
+}
+
+.hobby h3 {
+    color: var(--morado);
+    margin-bottom: 8px;
+}
+
+/* ==================================
+   7. MI COMIDA FAVORITA
+================================== */
+.comida {
+    background: linear-gradient(135deg, #f1e4ff, #fcf8ff);
+}
+
+.comida-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.comida-grid img {
+    height: 360px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #7041a425;
+}
+
+.comida-grid h3 {
+    color: var(--morado);
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+/* ==================================
+   8. MI PERSONALIDAD
+================================== */
+.personalidad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.personalidad-card {
+    text-align: center;
+    border-bottom: 5px solid var(--lila);
+}
+
+.icono {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.personalidad-card h3 {
+    color: var(--morado);
+    margin-bottom: 8px;
+}
+
+/* ==================================
+   9. GALERIA
+================================== */
+.galeria {
+    background: white;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.galeria-item {
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.galeria-item img {
+    height: 260px;
+    transition: transform .4s;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
+
+.galeria-item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(transparent, #251333d9);
+}
+
+/* ==================================
+   10. MIS VALORES
+================================== */
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.valor {
+    text-align: center;
+}
+
+/* ==================================
+   11. MI FODA
+================================== */
+.foda {
+    background: white;
+}
+
+.foda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.foda-card h3 {
+    color: var(--morado);
+    margin-bottom: 10px;
+}
+
+.foda-card li {
+    margin: 7px 0 7px 20px;
+}
+
+/* ==================================
+   12. MIS METAS
+================================== */
+.metas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.metas-grid h3 {
+    color: var(--morado);
+    margin-bottom: 15px;
+}
+
+.meta {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.check {
+    color: #8c58c5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ==================================
+   13. MISION Y VISION
+================================== */
+.mision {
+    background: linear-gradient(135deg, #7144a3, #a477d5);
+    color: white;
+}
+
+.mision h2,
+.mision .subtitulo {
+    color: white;
+}
+
+.mision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.mision-card {
+    background: #ffffff18;
+    border: 1px solid #ffffff55;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.mision-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* ==================================
+   14. FRASE FINAL
+================================== */
+.frase-final {
+    text-align: center;
+    padding: 75px 8%;
+    background: #eee1ff;
+}
+
+.frase-final h2 {
+    font-size: 30px;
+}
+
+.frase-grande {
+    font-size: 25px;
+    color: var(--morado);
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 750px;
+}
+
+/* ==================================
+   15. PIE DE PAGINA
+================================== */
+footer {
+    background: #382052;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin: 7px 0;
+}
+
+footer a {
+    color: #e7ccff;
+}
+
+.volver {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: var(--morado);
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    z-index: 900;
+}
+
+/* ==================================
+   16. ANIMACIONES
+================================== */
+.animar {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s, transform .7s;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==================================
+   17. DISEÑO PARA CELULARES
+================================== */
+@media (max-width: 900px) {
+    section {
+        padding: 65px 6%;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .historia-grid,
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        right: 0;
+        background: #7041a4;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu.abierto {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .hero,
+    .sobre-grid,
+    .comida-grid,
+    .mision-grid,
+    .metas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+
+    .hero-imagen img {
+        height: 340px;
+    }
+
+    .sobre-foto img {
+        height: 300px;
+    }
+
+    .historia-grid,
+    .hobbies-grid,
+    .personalidad-grid,
+    .galeria-grid,
+    .foda-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item img {
+        height: 260px;
+    }
+
+    .datos {
+        grid-template-columns: 1fr;
+    }
+
+    .comida-grid img {
+        height: 280px;
+    }
+
+    .frase-grande {
+        font-size: 21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==================================
+     MENU PRINCIPAL
+================================== -->
+<header>
+    <nav class="navbar">
+        <a href="#inicio" class="logo">💜 Nayeli <span>Villalobos</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#historia">Mi historia</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#galeria">Galería</a>
+            <a href="#metas">Mis metas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<!-- ==================================
+     PORTADA
+================================== -->
+<section class="hero" id="inicio">
+    <div class="hero-text animar">
+        <span class="etiqueta">✨ MI ESPACIO PERSONAL ✨</span>
+
+        <h1>¡Hola! Soy <span>Nayeli Villalobos Areche</span> 💜</h1>
+
+        <p>
+            Bienvenido a mi pequeño mundo, un espacio donde comparto
+            mi historia, mis gustos, mis sueños y las cosas que hacen
+            especial mi vida.
+        </p>
+
+        <p>
+            Soy una joven que sigue aprendiendo, creciendo y luchando
+            por sus objetivos. Aunque al principio puedo parecer poco
+            sociable, cuando alguien se gana mi confianza encuentra
+            una amiga sincera, leal y dispuesta a brindar su apoyo.
+        </p>
+
+        <p class="frase">
+            "No necesito tener todo resuelto; necesito seguir avanzando
+            con fe, valentía y ganas de superarme".
+        </p>
+
+        <a href="#sobre-mi" class="boton">Conóceme más 💜</a>
+        <a href="#hobbies" class="boton">Mis pasatiempos ✨</a>
+    </div>
+
+    <div class="hero-imagen animar">
+        <img
+          src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-18-at-3.33.40-PM.jpeg"
+          alt="Fotografía ilustrativa para la presentación personal">
+        <div class="decoracion">🌷 Soñadora y perseverante 🌷</div>
+    </div>
+</section>
+
+<!-- ==================================
+     SOBRE MI
+================================== -->
+<section id="sobre-mi">
+    <h2>🌷 Un poquito sobre mí 🌷</h2>
+    <div class="linea"></div>
+    <p class="subtitulo">
+        Detrás de cada sonrisa existe una historia, una familia,
+        aprendizajes y sueños que nos motivan a seguir adelante.
+    </p>
+
+    <div class="sobre-grid">
+        <div class="sobre-foto animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-18-at-3.26.59-PM-1.jpeg"
+              alt="Imagen ilustrativa de una joven">
+        </div>
+
+        <div class="sobre-texto animar">
+            <h3>Esta soy yo, Nayeli 💜</h3>
+
+            <p>
+                Mi nombre es Nayeli Villalobos Areche. Nací el 28 de enero
+                de 2006 en la comunidad de Manyacc, distrito de Anta,
+                provincia de Acobamba, Huancavelica.
+            </p>
+
+            <p>
+                Mi familia es una parte fundamental de mi vida. Mis padres,
+                Maxilia Areche Cueto y Cosme Villalobos Areche, son importantes
+                en mi camino y en mis ganas de seguir adelante. También
+                comparto mi vida con mis cinco hermanas: Nery, Irma, Lisbeth,
+                Milusca y Yesica.
+            </p>
+
+            <p>
+                Me considero una persona responsable, respetuosa y
+                comprometida con lo que quiero lograr. No suelo confiar
+                rápidamente en todo el mundo, pero cuando encuentro una
+                amistad verdadera, procuro cuidarla y demostrar que puede
+                contar conmigo.
+            </p>
+
+            <p>
+                Estoy construyendo mi futuro paso a paso. Sé que habrá
+                dificultades, pero quiero aprender de cada experiencia,
+                confiar más en mis capacidades y demostrarme que puedo
+                alcanzar mis objetivos.
+            </p>
+
+            <div class="datos">
+                <div class="dato">
+                    <strong>🎂 Mi cumpleaños</strong>
+                    28 de enero
+                </div>
+
+                <div class="dato">
+                    <strong>📍 Mis raíces</strong>
+                    Manyacc, Huancavelica
+                </div>
+
+                <div class="dato">
+                    <strong>💜 Mi personalidad</strong>
+                    Reservada y leal
+                </div>
+
+                <div class="dato">
+                    <strong>🎯 Mi objetivo</strong>
+                    Ser una gran profesional
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================================
+     MI HISTORIA Y ESTUDIOS
+================================== -->
+<section class="historia" id="historia">
+    <h2>📚 Mi historia y formación académica</h2>
+    <div class="linea"></div>
+
+    <p class="subtitulo">
+        Cada etapa de mi vida me ha dejado enseñanzas que forman
+        parte de la persona que soy hoy.
+    </p>
+
+    <div class="historia-grid">
+        <article class="tarjeta historia-card animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-6.42.04-PM.jpeg"
+              alt="Estudiantes aprendiendo en una escuela">
+
+            <span class="etiqueta">Primera etapa</span>
+            <h3>🏫 Educación primaria</h3>
+
+            <p>
+                Estudié en la I.E. 36150 Nuestra Señora de Fátima,
+                donde inicié mi formación académica y aprendí valores
+                importantes para mi vida.
+            </p>
+        </article>
+
+        <article class="tarjeta historia-card animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-10-at-6.36.20-PM-1.jpeg"
+              alt="Aula de aprendizaje">
+
+            <span class="etiqueta">Nuevos aprendizajes</span>
+            <h3>🎓 Educación secundaria</h3>
+
+            <p>
+                Continué mis estudios en la I.E.E. San Francisco de Asís.
+                Durante esta etapa fortalecí mis conocimientos, viví
+                nuevas experiencias y fui descubriendo mis intereses.
+            </p>
+        </article>
+
+        <article class="tarjeta historia-card animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-14-at-10.05.04-AM-1.jpeg"
+              alt="Computadora y herramientas tecnológicas">
+
+            <span class="etiqueta">Mi presente</span>
+            <h3>💻 Educación superior</h3>
+
+            <p>
+                Actualmente estudio en el I.E.S.T.P. Manuel Scorza Torre,
+                en Arquitectura de Plataformas y Servicios de Tecnologías
+                de la Información (APSTI). Estoy cursando el sexto semestre
+                y me preparo para culminar esta importante etapa.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- ==================================
+     MIS HOBBIES
+================================== -->
+<section id="hobbies">
+    <h2>⚽ Mis hobbies y pasatiempos 🏐</h2>
+    <div class="linea"></div>
+
+    <p class="subtitulo">
+        En mis momentos libres disfruto realizar actividades que
+        me hacen feliz, me ayudan a despejar la mente y me permiten
+        compartir experiencias.
+    </p>
+
+    <div class="hobbies-grid">
+        <article class="tarjeta hobby animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-18-at-3.26.59-PM-2.jpeg"
+              alt="Balón de vóley en una cancha">
+
+            <div class="hobby-contenido">
+                <h3>🏐 Jugar vóley</h3>
+                <p>
+                    Me gusta jugar vóley porque disfruto la emoción del
+                    partido, la coordinación y el trabajo en equipo.
+                    Cada juego me recuerda que la comunicación,
+                    el esfuerzo y la unión pueden marcar la diferencia.
+                </p>
+            </div>
+        </article>
+
+        <article class="tarjeta hobby animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-30-at-7.31.11-PM.jpeg"
+              alt="Balón de fútbol sobre el campo">
+
+            <div class="hobby-contenido">
+                <h3>⚽ Jugar fútbol</h3>
+                <p>
+                    El fútbol me permite mantenerme activa, divertirme
+                    y disfrutar de la competencia sana. Me gusta esa
+                    sensación de dar lo mejor de mí y compartir
+                    momentos agradables con otras personas.
+                </p>
+            </div>
+        </article>
+
+        <article class="tarjeta hobby animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-6.46.44-PM.jpeg"
+              alt="Montañas y paisaje de viaje">
+
+            <div class="hobby-contenido">
+                <h3>✈️ Viajar y conocer lugares</h3>
+                <p>
+                    Me gusta la idea de viajar, descubrir paisajes,
+                    conocer nuevos lugares y vivir experiencias
+                    diferentes. Cada viaje puede convertirse en
+                    un recuerdo bonito y una oportunidad para aprender.
+                </p>
+            </div>
+        </article>
+
+        <article class="tarjeta hobby animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-6.46.17-PM.jpeg"
+              alt="Escenario con luces de espectáculo">
+
+            <div class="hobby-contenido">
+                <h3>💃 Bailar carnavales</h3>
+                <p>
+                    Me encanta disfrutar del baile de carnavales,
+                    de la música y de las tradiciones que nos unen
+                    como comunidad. Es una forma de expresar alegría
+                    y conservar nuestras costumbres.
+                </p>
+            </div>
+        </article>
+
+        <article class="tarjeta hobby animar">
+            <img
+              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80"
+              alt="Cuaderno para escribir ideas">
+
+            <div class="hobby-contenido">
+                <h3>🌸 Aprender cosas nuevas</h3>
+                <p>
+                    También quiero seguir aprendiendo, descubrir
+                    nuevas habilidades y mejorar cada día.
+                    Creo que el crecimiento personal comienza
+                    cuando nos damos la oportunidad de intentarlo.
+                </p>
+            </div>
+        </article>
+
+        <article class="tarjeta hobby animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-10-at-6.02.15-PM-1.jpeg"
+              alt="Hermoso paisaje al atardecer">
+
+            <div class="hobby-contenido">
+                <h3>🌅 Disfrutar los momentos</h3>
+                <p>
+                    Me gusta valorar las pequeñas cosas de la vida,
+                    guardar recuerdos bonitos y compartir tiempo
+                    con las personas que forman parte de mi historia.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ==================================
+     MI COMIDA FAVORITA
+================================== -->
+<section class="comida" id="comida">
+    <h2>🍽️ Mi comida favorita</h2>
+    <div class="linea"></div>
+
+    <div class="comida-grid">
+        <div class="animar">
+            <img
+              src="https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=900&q=85"
+              alt="Plato de comida marina, imagen ilustrativa">
+        </div>
+
+        <div class="animar">
+            <span class="etiqueta">Un sabor que me encanta</span>
+
+            <h3>🐟 ¡El ceviche peruano!</h3>
+
+            <p>
+                Si hay una comida que elegiría entre mis favoritas,
+                es el ceviche. Su sabor fresco, el limón, la cebolla
+                y la combinación de ingredientes hacen que sea
+                un plato especial.
+            </p>
+
+            <p>
+                Además de disfrutarlo por su sabor, me gusta porque
+                representa una parte de nuestra gastronomía peruana.
+                Nuestra comida es una muestra de la riqueza cultural
+                y de la variedad de sabores que tenemos en el país.
+            </p>
+
+            <p>
+                Para mí, compartir una comida rica también puede
+                convertirse en un momento bonito con las personas
+                que apreciamos. ¡Un buen ceviche siempre se disfruta!
+            </p>
+
+            <span class="etiqueta">🇵🇪 Orgullosa de nuestra gastronomía</span>
+        </div>
+    </div>
+</section>
+
+<!-- ==================================
+     MI PERSONALIDAD
+================================== -->
+<section id="personalidad">
+    <h2>💗 Así es mi personalidad</h2>
+    <div class="linea"></div>
+
+    <p class="subtitulo">
+        No todas las personas expresamos lo que sentimos de la misma
+        manera. Yo prefiero las relaciones sinceras y las amistades
+        que se construyen con respeto y confianza.
+    </p>
+
+    <div class="personalidad-grid">
+        <article class="tarjeta personalidad-card animar">
+            <div class="icono">🌷</div>
+            <h3>Poco sociable al principio</h3>
+            <p>
+                No siempre soy la primera en iniciar una conversación.
+                Me tomo mi tiempo para conocer a las personas y sentirme
+                cómoda antes de mostrar mi verdadera personalidad.
+            </p>
+        </article>
+
+        <article class="tarjeta personalidad-card animar">
+            <div class="icono">💜</div>
+            <h3>Una buena amiga</h3>
+            <p>
+                Cuando alguien se gana mi confianza, procuro ser
+                una amiga sincera, leal y comprensiva. Valoro mucho
+                a quienes están conmigo de corazón.
+            </p>
+        </article>
+
+        <article class="tarjeta personalidad-card animar">
+            <div class="icono">🦋</div>
+            <h3>Sensible y perseverante</h3>
+            <p>
+                Soy sensible y a veces puedo dudar de mis capacidades,
+                pero estoy aprendiendo a confiar más en mí, superar
+                mis miedos y continuar avanzando.
+            </p>
+        </article>
+
+        <article class="tarjeta personalidad-card animar">
+            <div class="icono">🌟</div>
+            <h3>Responsable</h3>
+            <p>
+                Trato de cumplir mis compromisos y esforzarme
+                en mis estudios, porque sé que mis decisiones
+                de hoy influyen en mi futuro.
+            </p>
+        </article>
+
+        <article class="tarjeta personalidad-card animar">
+            <div class="icono">🤝</div>
+            <h3>Respetuosa</h3>
+            <p>
+                Considero importante tratar a los demás con respeto,
+                valorar las diferencias y actuar con amabilidad
+                en cada situación.
+            </p>
+        </article>
+
+        <article class="tarjeta personalidad-card animar">
+            <div class="icono">🌈</div>
+            <h3>Con sueños por cumplir</h3>
+            <p>
+                Quiero crecer como persona, mejorar mis habilidades
+                y construir una vida de la que pueda sentirme orgullosa.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- ==================================
+     GALERIA DE IMAGENES
+================================== -->
+<section class="galeria" id="galeria">
+    <h2>📸 Mi galería de inspiración</h2>
+    <div class="linea"></div>
+
+    <p class="subtitulo">
+        Una colección de imágenes que representan mis gustos,
+        mis intereses y las cosas bonitas que quiero seguir
+        descubriendo en la vida.
+    </p>
+
+    <div class="galeria-grid">
+        <div class="galeria-item animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-12.32.13-PM.jpeg"
+              alt="Retrato ilustrativo">
+            <span>💜 Mi mundo personal</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=700&q=80"
+              alt="Deporte de vóley">
+            <span>🏐 Mi pasión por el vóley</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-10-at-7.05.43-PM.jpeg"
+              alt="Deporte de fútbol">
+            <span>⚽ Fútbol y diversión</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-6.46.44-PM-1.jpeg"
+              alt="Paisaje de montaña">
+            <span>✈️ Nuevos destinos</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"
+              alt="Tecnología">
+            <span>💻 Mi futuro profesional</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-7.18.31-PM.jpeg"
+              alt="Paisaje al atardecer">
+            <span>🌅 Momentos especiales</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="http://localhost/wordpress/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-10-at-6.50.40-PM.jpeg"
+              alt="Música y baile">
+            <span>💃 Música y tradiciones</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80"
+              alt="Cuaderno de ideas">
+            <span>📚 Aprender y crecer</span>
+        </div>
+
+        <div class="galeria-item animar">
+            <img
+              src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=700&q=80"
+              alt="Paisaje natural">
+            <span>🌷 Sueños por alcanzar</span>
+        </div>
+    </div>
+</section>
+
+<!-- ==================================
+     MIS VALORES
+================================== -->
+<section id="valores">
+    <h2>💎 Los valores que me representan</h2>
+    <div class="linea"></div>
+
+    <p class="subtitulo">
+        Los valores son una guía para tomar decisiones, convivir
+        con los demás y construir el futuro que deseamos.
+    </p>
+
+    <div class="valores-grid">
+        <article class="tarjeta valor animar">
+            <div class="icono">❤️</div>
+            <h3>Amor</h3>
+            <p>Valorar a mi familia y a las personas importantes en mi vida.</p>
+        </article>
+
+        <article class="tarjeta valor animar">
+            <div class="icono">🤝</div>
+            <h3>Respeto</h3>
+            <p>Tratar a cada persona con consideración y amabilidad.</p>
+        </article>
+
+        <article class="tarjeta valor animar">
+            <div class="icono">📚</div>
+            <h3>Responsabilidad</h3>
+            <p>Cumplir mis deberes y comprometerme con mis objetivos.</p>
+        </article>
+
+        <article class="tarjeta valor animar">
+            <div class="icono">🌟</div>
+            <h3>Perseverancia</h3>
+            <p>Seguir intentando incluso cuando las cosas se complican.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ==================================
+     MI FODA
+================================== -->
+<section class="foda" id="foda">
+    <h2>🌱 Mi análisis personal FODA</h2>
+    <div class="linea"></div>
+
+    <p class="subtitulo">
+        Reconocer mis fortalezas y los aspectos que debo mejorar
+        me ayuda a tomar mejores decisiones para mi desarrollo.
+    </p>
+
+    <div class="foda-grid">
+        <article class="tarjeta foda-card animar">
+            <h3>💪 Mis fortalezas</h3>
+            <ul>
+                <li>Responsabilidad en mis estudios.</li>
+                <li>Respeto hacia los demás.</li>
+                <li>Compromiso con mis objetivos.</li>
+                <li>Perseverancia para seguir aprendiendo.</li>
+                <li>Valoro a mi familia y mis principios.</li>
+            </ul>
+        </article>
+
+        <article class="tarjeta foda-card animar">
+            <h3>🌷 Mis oportunidades</h3>
+            <ul>
+                <li>Estoy cursando una carrera superior.</li>
+                <li>Cuento con el apoyo de mi familia.</li>
+                <li>Puedo aprovechar mis conocimientos.</li>
+                <li>Tengo oportunidades para capacitarme.</li>
+                <li>Mis metas orientan mis decisiones.</li>
+            </ul>
+        </article>
+
+        <article class="tarjeta foda-card animar">
+            <h3>🦋 Aspectos que quiero mejorar</h3>
+            <ul>
+                <li>A veces soy muy sensible.</li>
+                <li>En ocasiones dudo de mis capacidades.</li>
+                <li>Me cuesta confiar rápidamente.</li>
+                <li>Quiero fortalecer mi seguridad personal.</li>
+                <li>Deseo aprender a manejar mejor mis preocupaciones.</li>
+            </ul>
+        </article>
+
+        <article class="tarjeta foda-card animar">
+            <h3>🌈 Mis desafíos</h3>
+            <ul>
+                <li>Afrontar las dificultades económicas que puedan surgir.</li>
+                <li>Prepararme para un mercado laboral competitivo.</li>
+                <li>Adaptarme a cambios inesperados.</li>
+                <li>Continuar aprendiendo nuevas tecnologías.</li>
+                <li>Convertir los obstáculos en oportunidades de aprendizaje.</li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<!-- ==================================
+     MIS METAS
+================================== -->
+<section id="metas">
+    <h2>🎯 Mis sueños y planes a futuro</h2>
+    <div class="linea"></div>
+
+    <p class="subtitulo">
+        Tengo sueños que quiero convertir en realidad.
+        Sé que para lograrlos necesito organizarme, aprender
+        y mantenerme comprometida con mis objetivos.
+    </p>
+
+    <div class="metas-grid">
+        <article class="tarjeta animar">
+            <h3>🌸 A corto plazo</h3>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Culminar satisfactoriamente mi carrera profesional.</p>
+            </div>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Mejorar mis conocimientos y habilidades técnicas.</p>
+            </div>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Seguir siendo responsable en mis estudios.</p>
+            </div>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Prepararme para ingresar al mundo laboral.</p>
+            </div>
+        </article>
+
+        <article class="tarjeta animar">
+            <h3>💜 A largo plazo</h3>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Convertirme en una profesional competente en tecnología.</p>
+            </div>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Conseguir estabilidad profesional y económica.</p>
+            </div>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Tener mi propia empresa en el futuro.</p>
+            </div>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Apoyar a mis padres y contribuir al bienestar de mi familia.</p>
+            </div>
+
+            <div class="meta">
+                <span class="check">✓</span>
+                <p>Continuar aprendiendo y cumpliendo mis sueños personales.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ==================================
+     MISION Y VISION
+================================== -->
+<section class="mision" id="mision">
+    <h2>✨ Mi misión y mi visión ✨</h2>
+    <div class="linea" style="background:white"></div>
+
+    <p class="subtitulo">
+        La persona que soy hoy está construyendo a la profesional
+        que deseo ser mañana.
+    </p>
+
+    <div class="mision-grid">
+        <article class="mision-card animar">
+            <h3>🌷 Mi misión</h3>
+            <p>
+                Continuar esforzándome en mis estudios de Arquitectura
+                de Plataformas y Servicios de Tecnologías de la Información,
+                cumplir mis compromisos con responsabilidad y tratar
+                a los demás con respeto.
+            </p>
+
+            <p>
+                Quiero aprovechar cada oportunidad para mejorar mis
+                habilidades técnicas y personales, actuar de acuerdo
+                con los valores que me enseñó mi familia y prepararme
+                para desempeñarme de la mejor manera en mi profesión.
+            </p>
+        </article>
+
+        <article class="mision-card animar">
+            <h3>🦋 Mi visión</h3>
+            <p>
+                Consolidarme como una profesional titulada en APSTI,
+                capacitada, responsable e innovadora en el sector
+                tecnológico.
+            </p>
+
+            <p>
+                Aspiro a afrontar nuevos retos en el área de tecnologías
+                de la información, alcanzar estabilidad profesional,
+                desarrollar mis propios proyectos y ser motivo de orgullo
+                para mi familia gracias al esfuerzo y al cumplimiento
+                de mis metas.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- ==================================
+     REFLEXION FINAL
+================================== -->
+<section class="frase-final">
+    <h2>💜 Mi compromiso conmigo misma 💜</h2>
+
+    <div class="linea"></div>
+
+    <p class="frase-grande">
+        "No importa cuántas veces dude de mí misma;
+        lo importante es recordar que todavía puedo aprender,
+        mejorar y volver a intentarlo".
+    </p>
+
+    <p>
+        Mi historia sigue escribiéndose. Quiero mirar hacia atrás
+        algún día y sentir orgullo por no haberme rendido, por cuidar
+        a quienes amo y por haber tenido el valor de luchar por mis sueños.
+    </p>
+
+    <p style="margin-top:20px; color:#7041a4; font-weight:bold;">
+        🌷 Con esfuerzo, paciencia y perseverancia, puedo construir
+        el futuro que deseo. 🌷
+    </p>
+
+    <a href="#inicio" class="boton">Volver al inicio ↑</a>
+</section>
+
+</main>
+
+<!-- ==================================
+     PIE DE PAGINA
+================================== -->
+<footer id="contacto">
+    <h2 style="color:white; font-size:27px;">💜 Gracias por visitar mi página 💜</h2>
+
+    <p>
+        Soy Nayeli Villalobos Areche y este es un pequeño espacio
+        para compartir quién soy y hacia dónde quiero llegar.
+    </p>
+
+    <p>🌸 Nunca dejes de creer en tus sueños. 🌸</p>
+
+    <p style="margin-top:20px;">
+        © <span id="anio"></span> Nayeli Villalobos Areche.
+        Todos los derechos reservados.
+    </p>
+
+    <p>
+        Diseñado con 💜, ilusión y muchas ganas de superarme.
+    </p>
+</footer>
+
+<button class="volver" id="volver" aria-label="Volver arriba">↑</button>
+
+<!-- ==================================
+     JAVASCRIPT
+================================== -->
+<script>
+// MENÚ PARA CELULARES
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", function () {
+    menu.classList.toggle("abierto");
+
+    const abierto = menu.classList.contains("abierto");
+    menuToggle.setAttribute("aria-expanded", abierto);
+    menuToggle.textContent = abierto ? "✕" : "☰";
+});
+
+// CERRAR EL MENÚ DESPUÉS DE SELECCIONAR UNA SECCIÓN
+document.querySelectorAll(".menu a").forEach(function (enlace) {
+    enlace.addEventListener("click", function () {
+        menu.classList.remove("abierto");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+    });
+});
+
+// MOSTRAR EL AÑO AUTOMÁTICAMENTE
+document.getElementById("anio").textContent = new Date().getFullYear();
+
+// BOTÓN PARA VOLVER AL INICIO
+const botonVolver = document.getElementById("volver");
+
+window.addEventListener("scroll", function () {
+    botonVolver.style.display = window.scrollY > 350 ? "block" : "none";
+});
+
+botonVolver.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+// ANIMAR LAS TARJETAS AL APARECER EN PANTALLA
+const elementos = document.querySelectorAll(".animar");
+
+if ("IntersectionObserver" in window) {
+    const observador = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (entrada) {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observador.unobserve(entrada.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    elementos.forEach(function (elemento) {
+        observador.observe(elemento);
+    });
+} else {
+    elementos.forEach(function (elemento) {
+        elemento.classList.add("visible");
+    });
+}
+
+// MOSTRAR EL CONTENIDO AUN SI JAVASCRIPT NO ACTIVA LAS ANIMACIONES
+window.addEventListener("load", function () {
+    document.querySelectorAll(".hero .animar").forEach(function (elemento) {
+        elemento.classList.add("visible");
+    });
+});
+</script>
+
+</body>
+</html>
